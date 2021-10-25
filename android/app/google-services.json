@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "170910749573",
+    "project_id": "shippermobile-e1759",
+    "storage_bucket": "shippermobile-e1759.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:170910749573:android:99e1da25c6c567d52e2aec",
+        "android_client_info": {
+          "package_name": "com.example.mobile_shipper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "170910749573-2e5lhiopmie53mhsc5866les9pp8v8k2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbwhnCvmc7uKaBRF7oEFAfHCrOND7KiqE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "170910749573-2e5lhiopmie53mhsc5866les9pp8v8k2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
