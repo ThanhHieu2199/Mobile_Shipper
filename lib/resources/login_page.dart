@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:mobile_shipper/resources/home_page.dart';
 import 'package:mobile_shipper/resources/register_page.dart';
 
 class LoginPage extends StatefulWidget {
@@ -93,7 +94,10 @@ class _LoginPageState extends State<LoginPage> {
                   width: double.infinity,
                   height: 50,
                   child: RaisedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => HomePage()));
+                    },
                     child: Text(
                       "Log In",
                       style: TextStyle(color: Colors.white,

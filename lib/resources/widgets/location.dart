@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_shipper/model/place.dart';
+import 'package:mobile_shipper/resources/location_page.dart';
 
 class location extends StatefulWidget {
-
+  final Function(PlaceItemRes, bool) onSelected;
+  location(this.onSelected);
   @override
   _locationState createState() => _locationState();
 }
 
 class _locationState extends State<location> {
-
+  PlaceItemRes fromAddress;
+  PlaceItemRes toAddress;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -27,7 +31,17 @@ class _locationState extends State<location> {
             width: double.infinity,
             height: 50,
             child: FlatButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => LocationPage(
+                      fromAddress == null ? "" : fromAddress.name,
+                          (place, isFrom) {
+                        widget.onSelected(place, isFrom);
+                        fromAddress = place;
+                        setState(() {});
+                      }, true
+                  )));
+              },
               child: SizedBox(
                 width: double.infinity,
                 height: double.infinity,
@@ -67,7 +81,17 @@ class _locationState extends State<location> {
             width: double.infinity,
             height: 50,
             child: FlatButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => LocationPage(
+                        toAddress == null ? "" : toAddress.name,
+                            (place, isFrom) {
+                          widget.onSelected(place, isFrom);
+                          toAddress = place;
+                          setState(() {});
+                        }, false
+                    )));
+              },
               child: SizedBox(
                 width: double.infinity,
                 height: double.infinity,

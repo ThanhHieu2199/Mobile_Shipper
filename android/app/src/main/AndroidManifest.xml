@@ -3,6 +3,9 @@
    <application
         android:label="mobile_shipper"
         android:icon="@mipmap/ic_launcher">
+       <meta-data android:name="com.google.android.geo.API_KEY"
+           android:value="AIzaSyC2FMmW38iwHbgFB0N071BEdpScYxvBsOw"/>
+
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
